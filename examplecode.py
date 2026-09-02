@@ -24,4 +24,27 @@ drive_base.straight(500)
 
 
 
+
+
+####################################
+
+#How to set up missions to run based on color sensors (example)
+
+from pybricks.parameters import Port, Color
+from pybricks.pupdevices import ColorSensor
+from pybricks.tools import wait
+
+# Initialize the color sensor on Port A
+sensor = ColorSensor(Port.A)
+
+# Main mission loop
+while True:
+    detected_color = sensor.color()
+    if detected_color == Color.RED:
+        # Do something for your mission
+        print("Red detected!")
+    wait(50)
+
+
+
                   
