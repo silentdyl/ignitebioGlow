@@ -16,10 +16,11 @@ drive_base = DriveBase(
     wheel_diameter=43,
     axle_track=95
 )
+#Mission 13 - Successful 09/05/2026
+hub.speaker.beep()
+drive_base.straight(400)
+armright.run_angle(-300, 100)
+drive_base.straight(-400)
 
 hub.speaker.beep()
-#drive_base.straight(470)
-#right_motor.run_angle(30, 10)
-#drive_base.straight(-400)
-
-hub.speaker.beep()
+# Stop mission 13
