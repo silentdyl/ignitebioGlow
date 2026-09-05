@@ -1,0 +1,24 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor
+from pybricks.robotics import DriveBase
+from pybricks.parameters import Port, Direction
+
+hub = PrimeHub()
+
+left_motor = Motor(Port.F, Direction.COUNTERCLOCKWISE)
+right_motor = Motor(Port.D)
+
+drive_base = DriveBase(
+    left_motor,
+    right_motor,
+    wheel_diameter=56,
+    axle_track=112
+)
+
+hub.speaker.beep()
+
+drive_base.straight(100)
+drive_base.turn(90)
+drive_base.straight(100)
+
+hub.speaker.beep()
