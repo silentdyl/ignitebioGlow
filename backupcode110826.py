@@ -396,3 +396,25 @@ while True:
         bot.settings(straight_speed=500, straight_acceleration=500)   
         bot.straight(1000)
         bot.turn(10)
+        bot.straight(1000)
+        hub.speaker.play_notes(['C3/3'], tempo=250)
+        (bot.stop())
+
+
+    #####    #        #     #  #######
+    #    #   #        #     #  #
+    ######   #        #     #  ###
+    #     #  #        #     #  #
+    #     #  #        #     #  #
+    ######   #######   #####   #######
+
+    if detected_color == Color.BLUE:
+        show_face("BLUE")
+        hub.light.on(Color(h=240, s=100, v=100))
+        hub.speaker.play_notes(['C5/5', 'E5/5'], tempo=250)
+        bot.straight(370)
+        armright.run_angle(-300, 90)
+        armright.run_angle(300, 90)
+        bot.straight(-380)
+        hub.speaker.play_notes(['C3/3'], tempo=250)
+        (bot.stop())
